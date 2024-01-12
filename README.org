@@ -1,13 +1,11 @@
 :PROPERTIES:
-#+title: MI-VOTING
+#+title: MI-VOTING (FINAL YEAR UNIVERSITY PROJECT)
 #+subtitle: BLOCKCHAIN-BASED VOTING DAPP IMPLEMENTATION GUIDE
 #+author: s-takoor (202007012)
 #+setupfile: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 :END:
 
-🚀 Final Year Project
-
-* TL;DR
+* 🚀 TL;DR
 This documentation outlines the process of implementing the blockchain-based e-voting decentralized application (dApp) using Bun as the primary JavaScript runtime and toolkit. It covers setting up the development environment, deploying the smart contract on a local Hardhat Ethereum development environment, and implementing the Mi-Voting dApp.
 
 * 🎯 OVERVIEW
