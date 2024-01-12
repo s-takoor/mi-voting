@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-11-14 Tue 12:05 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MI-VOTING</title>
+<meta name="author" content="s-takoor (202007012)" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">MI-VOTING
+<br />
+<span class="subtitle">BLOCKCHAIN-BASED VOTING DAPP IMPLEMENTATION GUIDE</span>
+</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4e7eee4">1. TL;DR</a></li>
+<li><a href="#orga25d2e8">2. OVERVIEW</a></li>
+<li><a href="#org0839ffb">3. TECHNOLOGIES AND TOOLS</a></li>
+<li><a href="#orgab60b88">4. SETTING UP THE DEVELOPMENT ENVIRONMENT</a>
+<ul>
+<li><a href="#orge474170">4.1. STEP 1: INITIALIZE A NEXT.JS APP</a></li>
+<li><a href="#org67a42cb">4.2. STEP 2: INSTALL HARDHAT</a></li>
+<li><a href="#orgfe93132">4.3. STEP 3: INSTALL ETHEREUM LIBRARY</a></li>
+<li><a href="#org66405ab">4.4. STEP 4: CREATE A JAVASCRIPT PROJECT</a></li>
+<li><a href="#org212f432">4.5. STEP 5: INSTALL REQUIRED PACKAGES</a></li>
+<li><a href="#orgb501d40">4.6. STEP 6: INITIATE THE HARDHAT NODE</a></li>
+<li><a href="#org262f87f">4.7. STEP 7: INITIATE THE IPFS DAEMON</a></li>
+<li><a href="#org05cc21a">4.8. STEP 8: COMPILE THE SMART CONTRACT</a></li>
+<li><a href="#org94f0319">4.9. STEP 9: DEPLOY THE SMART CONTRACT</a></li>
+</ul>
+</li>
+<li><a href="#org639dd64">5. STARTING THE DEV SERVER</a></li>
+<li><a href="#org4064248">6. CHECKLIST</a></li>
+<li><a href="#org51e0f1d">7. CODE STATISTICS</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4e7eee4" class="outline-2">
+<h2 id="org4e7eee4"><span class="section-number-2">1.</span> TL;DR</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This documentation outlines the process of implementing the blockchain-based e-voting decentralized application (dApp) using Bun as the primary JavaScript runtime and toolkit. It covers setting up the development environment, deploying the smart contract on a local Hardhat Ethereum development environment, and implementing the Mi-Voting dApp.
+</p>
+</div>
+</div>
+<div id="outline-container-orga25d2e8" class="outline-2">
+<h2 id="orga25d2e8"><span class="section-number-2">2.</span> OVERVIEW</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+This guide will walk you through the following key steps:
+</p>
+<ol class="org-ol">
+<li>Setting up the development environment.</li>
+<li>Deploying the smart contract on the local Hardhat Ethereum development environment.</li>
+<li>Implementing the Mi-Voting dApp.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org0839ffb" class="outline-2">
+<h2 id="org0839ffb"><span class="section-number-2">3.</span> TECHNOLOGIES AND TOOLS</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Before we begin, ensure you have the following technologies and tools installed:
+</p>
+<ul class="org-ul">
+<li><a href="https://bun.sh/">Bun</a>: A fast JavaScript runtime &amp; toolkit;</li>
+<li><a href="https://hardhat.org/">Hardhat</a>: A development environment for Ethereum smart contract development;</li>
+<li><a href="https://ipfs.io/">InterPlanetary File system (IPFS)</a>: A peer-to-peer hypermedia protocol for decentralized file storage and sharing;</li>
+<li><a href="https://nextjs.org/">Next.js</a>: A popular React framework for building server-rendered web applications;</li>
+<li><a href="https://chakra-ui.com/">Chakra UI</a>: A set of accessible and customizable UI components for React applications.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgab60b88" class="outline-2">
+<h2 id="orgab60b88"><span class="section-number-2">4.</span> SETTING UP THE DEVELOPMENT ENVIRONMENT</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orge474170" class="outline-3">
+<h3 id="orge474170"><span class="section-number-3">4.1.</span> STEP 1: INITIALIZE A NEXT.JS APP</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="org-src-container">
+<pre class="src src-bash">bun create next-app
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org67a42cb" class="outline-3">
+<h3 id="org67a42cb"><span class="section-number-3">4.2.</span> STEP 2: INSTALL HARDHAT</h3>
+<div class="outline-text-3" id="text-4-2">
+<div class="org-src-container">
+<pre class="src src-bash">bun a --dev hardhat
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfe93132" class="outline-3">
+<h3 id="orgfe93132"><span class="section-number-3">4.3.</span> STEP 3: INSTALL ETHEREUM LIBRARY</h3>
+<div class="outline-text-3" id="text-4-3">
+<div class="org-src-container">
+<pre class="src src-bash">bun a --dev @nomicfoundation/hardhat-ethers ethers
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org66405ab" class="outline-3">
+<h3 id="org66405ab"><span class="section-number-3">4.4.</span> STEP 4: CREATE A JAVASCRIPT PROJECT</h3>
+<div class="outline-text-3" id="text-4-4">
+<div class="org-src-container">
+<pre class="src src-bash">bunx hardhat
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org212f432" class="outline-3">
+<h3 id="org212f432"><span class="section-number-3">4.5.</span> STEP 5: INSTALL REQUIRED PACKAGES</h3>
+<div class="outline-text-3" id="text-4-5">
+<div class="org-src-container">
+<pre class="src src-bash">bun a dotenv ipfs-api
+bun a @chakra-ui/react @emotion/react @emotion/styled framer-motion @chakra-ui/icons
+bun a react-icons
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb501d40" class="outline-3">
+<h3 id="orgb501d40"><span class="section-number-3">4.6.</span> STEP 6: INITIATE THE HARDHAT NODE</h3>
+<div class="outline-text-3" id="text-4-6">
+<div class="org-src-container">
+<pre class="src src-bash">bunx hardhat node
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org262f87f" class="outline-3">
+<h3 id="org262f87f"><span class="section-number-3">4.7.</span> STEP 7: INITIATE THE IPFS DAEMON</h3>
+<div class="outline-text-3" id="text-4-7">
+<div class="org-src-container">
+<pre class="src src-bash">ipfs daemon
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org05cc21a" class="outline-3">
+<h3 id="org05cc21a"><span class="section-number-3">4.8.</span> STEP 8: COMPILE THE SMART CONTRACT</h3>
+<div class="outline-text-3" id="text-4-8">
+<div class="org-src-container">
+<pre class="src src-bash">bunx hardhat compile
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org94f0319" class="outline-3">
+<h3 id="org94f0319"><span class="section-number-3">4.9.</span> STEP 9: DEPLOY THE SMART CONTRACT</h3>
+<div class="outline-text-3" id="text-4-9">
+<div class="org-src-container">
+<pre class="src src-bash">bunx hardhat run scripts/deploy.js --network localhost
+</pre>
+</div>
+
+<p>
+Post-deployment Operations (if the contract has been deployed previously)
+</p>
+<ul class="org-ul">
+<li>remove the `artifacts` directory</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">rip artifacts
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>remove the `cache` directory</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">rip cache
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org639dd64" class="outline-2">
+<h2 id="org639dd64"><span class="section-number-2">5.</span> STARTING THE DEV SERVER</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>with Bun</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">bun --bun run dev
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>with Node.js</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">bun run dev
+</pre>
+</div>
+
+<p>
+Visit <a href="http://localhost:3000">http://localhost:3000</a> in your browser to access the application.
+</p>
+</div>
+</div>
+<div id="outline-container-org4064248" class="outline-2">
+<h2 id="org4064248"><span class="section-number-2">6.</span> CHECKLIST</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Before you begin, ensure you&rsquo;ve completed the following:
+</p>
+<ul class="org-ul">
+<li>Installed Bun using the command</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #6ae4b9;">curl</span> -fsSL https://bun.sh/install | bash
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Installed IPFS
+<ul class="org-ul">
+<li>Install IPFS using Homebrew (one-time setup)</li>
+</ul></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">brew install ipfs
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org51e0f1d" class="outline-2">
+<h2 id="org51e0f1d"><span class="section-number-2">7.</span> CODE STATISTICS</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+<a href="https://github.com/XAMPPRocky/tokei">Tokei</a>: A lightweight code counter with efficient directory code counting
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Language</th>
+<th scope="col" class="org-right">Files</th>
+<th scope="col" class="org-right">Lines</th>
+<th scope="col" class="org-right">Codes</th>
+<th scope="col" class="org-right">Comments</th>
+<th scope="col" class="org-right">Blanks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">HTML</td>
+<td class="org-right">1</td>
+<td class="org-right">366</td>
+<td class="org-right">332</td>
+<td class="org-right">1</td>
+<td class="org-right">33</td>
+</tr>
+
+<tr>
+<td class="org-left">JavaScript</td>
+<td class="org-right">20</td>
+<td class="org-right">1695</td>
+<td class="org-right">1492</td>
+<td class="org-right">13</td>
+<td class="org-right">190</td>
+</tr>
+
+<tr>
+<td class="org-left">JSON</td>
+<td class="org-right">5</td>
+<td class="org-right">13156</td>
+<td class="org-right">13155</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Org</td>
+<td class="org-right">1</td>
+<td class="org-right">124</td>
+<td class="org-right">103</td>
+<td class="org-right">0</td>
+<td class="org-right">21</td>
+</tr>
+
+<tr>
+<td class="org-left">Solidity</td>
+<td class="org-right">1</td>
+<td class="org-right">180</td>
+<td class="org-right">126</td>
+<td class="org-right">21</td>
+<td class="org-right">33</td>
+</tr>
+
+<tr>
+<td class="org-left">Plain Text</td>
+<td class="org-right">2</td>
+<td class="org-right">111</td>
+<td class="org-right">0</td>
+<td class="org-right">81</td>
+<td class="org-right">30</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Total</td>
+<td class="org-right">30</td>
+<td class="org-right">15632</td>
+<td class="org-right">15208</td>
+<td class="org-right">116</td>
+<td class="org-right">308</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: s-takoor (202007012)</p>
+<p class="date">Created: 2023-11-14 Tue 12:05</p>
+</div>
+</body>
+</html>

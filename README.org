@@ -1,0 +1,124 @@
+:PROPERTIES:
+#+title: MI-VOTING
+#+subtitle: BLOCKCHAIN-BASED VOTING DAPP IMPLEMENTATION GUIDE
+#+author: s-takoor (202007012)
+#+setupfile: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+:END:
+
+* TL;DR
+This documentation outlines the process of implementing the blockchain-based e-voting decentralized application (dApp) using Bun as the primary JavaScript runtime and toolkit. It covers setting up the development environment, deploying the smart contract on a local Hardhat Ethereum development environment, and implementing the Mi-Voting dApp.
+
+* OVERVIEW
+This guide will walk you through the following key steps:
+1. Setting up the development environment.
+2. Deploying the smart contract on the local Hardhat Ethereum development environment.
+3. Implementing the Mi-Voting dApp.
+
+* TECHNOLOGIES AND TOOLS
+Before we begin, ensure you have the following technologies and tools installed:
+- [[https://bun.sh/][Bun]]: A fast JavaScript runtime & toolkit;
+- [[https://hardhat.org/][Hardhat]]: A development environment for Ethereum smart contract development;
+- [[https://ipfs.io/][InterPlanetary File system (IPFS)]]: A peer-to-peer hypermedia protocol for decentralized file storage and sharing;
+- [[https://nextjs.org/][Next.js]]: A popular React framework for building server-rendered web applications;
+- [[https://chakra-ui.com/][Chakra UI]]: A set of accessible and customizable UI components for React applications.
+
+* SETTING UP THE DEVELOPMENT ENVIRONMENT
+** STEP 1: INITIALIZE A NEXT.JS APP
+#+begin_src bash
+bun create next-app
+#+end_src
+
+** STEP 2: INSTALL HARDHAT
+#+begin_src bash
+bun a --dev hardhat
+#+end_src
+
+** STEP 3: INSTALL ETHEREUM LIBRARY
+#+begin_src bash
+bun a --dev @nomicfoundation/hardhat-ethers ethers
+#+end_src
+
+** STEP 4: CREATE A JAVASCRIPT PROJECT
+#+begin_src bash
+bunx hardhat
+#+end_src
+
+** STEP 5: INSTALL REQUIRED PACKAGES
+#+begin_src bash
+bun a dotenv ipfs-api
+bun a @chakra-ui/react @emotion/react @emotion/styled framer-motion @chakra-ui/icons
+bun a react-icons
+#+end_src
+
+** STEP 6: INITIATE THE HARDHAT NODE
+#+begin_src bash
+bunx hardhat node
+#+end_src
+
+** STEP 7: INITIATE THE IPFS DAEMON
+#+begin_src bash
+ipfs daemon
+#+end_src
+
+** STEP 8: COMPILE THE SMART CONTRACT
+#+begin_src bash
+bunx hardhat compile
+#+end_src
+
+** STEP 9: DEPLOY THE SMART CONTRACT
+#+begin_src bash
+bunx hardhat run scripts/deploy.js --network localhost
+#+end_src
+
+Post-deployment Operations (if the contract has been deployed previously)
+- remove the `artifacts` directory
+#+begin_src bash
+rip artifacts
+#+end_src
+
+- remove the `cache` directory
+#+begin_src bash
+rip cache
+#+end_src
+
+* STARTING THE DEV SERVER
+- with Bun
+#+begin_src bash
+bun --bun run dev
+#+end_src
+
+- with Node.js
+#+begin_src bash
+bun run dev
+#+end_src
+
+Visit http://localhost:3000 in your browser to access the application.
+
+* CHECKLIST
+Before you begin, ensure you've completed the following:
+- Installed Bun using the command
+#+begin_src bash
+curl -fsSL https://bun.sh/install | bash
+#+end_src
+
+- Installed IPFS
+  + Install IPFS using Homebrew (one-time setup)
+#+begin_src bash
+brew install ipfs
+#+end_src
+
+* CODE STATISTICS
+[[https://github.com/XAMPPRocky/tokei][Tokei]]: A lightweight code counter with efficient directory code counting
+
+|------------+-------+-------+-------+----------+--------|
+| Language   | Files | Lines | Codes | Comments | Blanks |
+|------------+-------+-------+-------+----------+--------|
+| HTML       |     1 |   366 |   332 |        1 |     33 |
+| JavaScript |    20 |  1695 |  1492 |       13 |    190 |
+| JSON       |     5 | 13156 | 13155 |        0 |      1 |
+| Org        |     1 |   124 |   103 |        0 |     21 |
+| Solidity   |     1 |   180 |   126 |       21 |     33 |
+| Plain Text |     2 |   111 |     0 |       81 |     30 |
+|------------+-------+-------+-------+----------+--------|
+| Total      |    30 | 15632 | 15208 |      116 |    308 |
+|------------+-------+-------+-------+----------+--------|

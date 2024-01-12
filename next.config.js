@@ -1,0 +1,20 @@
+/** @type {import('next').NextConfig} */
+require('dotenv').config();
+
+
+module.exports = {
+    env: {
+    LOCALHOST_URL: process.env.LOCALHOST_URL,
+    HARDHAT_NETWORK_URL: process.env.HARDHAT_NETWORK_URL,
+    IPFS_NODE_URL: process.env.IPFS_NODE_URL,
+    IPFS_HOST: process.env.IPFS_HOST,
+    IPFS_PORT: process.env.IPFS_PORT,
+    IPFS_GATEWAY_URL: process.env.IPFS_GATEWAY_URL,
+    IPFS_CONTRACT_METADATA: process.env.IPFS_CONTRACT_METADATA,
+    IPFS_ELECTION_GUIDELINES_CID: process.env.IPFS_ELECTION_GUIDELINES_CID,
+    IPFS_EVENT_LOGS: process.env.IPFS_EVENT_LOGS,
+    SMART_CONTRACT_OWNER_ADDRESS: process.env.SMART_CONTRACT_OWNER_ADDRESS,
+    SMART_CONTRACT_OWNER_PRIVATE_KEY: process.env.SMART_CONTRACT_OWNER_PRIVATE_KEY,
+    VOTING_CONTRACT_ADDRESS: process.env.VOTING_CONTRACT_ADDRESS,
+  },
+};

@@ -1,0 +1,6 @@
+{
+    "contractName": "VotingContract",
+    "version": "1.0",
+    "author": "202007012",
+    "description": "Smart contract for a Mi-Voting dApp"
+}

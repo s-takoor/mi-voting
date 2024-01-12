@@ -1,0 +1,53 @@
+Blockchain-Based E-Voting dApp Guidelines
+
+1. Voting Eligibility:
+   - All citizens of Mauritius who are 18 years of age or older are eligible to vote.
+   - Voters must be registered in the official electoral roll.
+
+2. Voter Registration:
+   - To participate in the election, voters must provide their Ethereum address.
+   - Registration opens on September 15, 2024, and closes on September 15, 2024.
+
+3.   Registration Process:
+   - During the registration period, eligible voters can provide their Ethereum address to the E-Voting Dapp.
+   - This Ethereum address serves as their unique identification.
+   - The voter's identity is protected and verified using blockchain cryptographic techniques.
+   - Once registered, voters' Ethereum addresses are added to the official electoral roll.
+
+4.   Data Storage on IPFS:
+   - Voter registration data, including Ethereum addresses, is securely stored on the InterPlanetary File System (IPFS).
+   - IPFS ensures decentralized, tamper-proof, and immutable storage of data.
+   - This approach enhances the security and transparency of the election process.
+   - Voter registration data on IPFS can be publicly verified, while individual identities remain private.
+
+5. Voting Period:
+   - The voting period starts at 8:00 AM (Mauritian Time) and ends at 6:00 PM (Mauritian Time).
+   - Voters can cast their votes during this period.
+
+6. Candidates and Parties:
+   - The election features the following candidates and their parties:
+     - Superman from the Justice Party
+     - Spider-Man from the Web Slingers Party
+     - Wonder Woman from the Amazon Warriors Party
+
+7. Casting Votes:
+   - Voters can cast their vote for one of the candidates.
+   - Once a vote is cast, it cannot be changed.
+
+8. Results:
+   - Voting results will be tallied automatically at the end of the voting period.
+   - The candidate with the highest number of votes will be declared the winner.
+
+9. Transparency and Security:
+   - The E-Voting Dapp is built on a blockchain to ensure transparency and immutability of votes.
+   - Voters' identities are protected using cryptographic techniques.
+
+10. Support and Assistance:
+   - For any technical issues or inquiries, contact our support team at [contact email/phone number].
+
+11. Code of Conduct:
+   - Voters are expected to conduct themselves in a respectful and responsible manner.
+   - Any attempt to manipulate or disrupt the election process will be strictly dealt with.
+
+We encourage all eligible voters to participate in this important election and make their voices heard for a better Mauritius!
+

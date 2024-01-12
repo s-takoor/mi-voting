@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>MI-VOTING</title>
+<meta name="author" content="Shashiduth Takoor"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/serif.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">MI-VOTING</h1><p class="subtitle"><b>NAME</b>: TAKOOR SHASHIDUTH (202007012) <b>SUPERVISOR</b>: HANS ABRAHAM <br />
+BSc (Hons) Computer Science (Oubs033) <br />
+Open University of Mauritius</p>
+<h2 class="date">2023-11-14 Tue 12:00</h2>
+</section>
+<aside class="notes">
+<ul>
+<li>morning, everyone! today, i&rsquo;m presenting Mi-Voting, a revolutionary blockchain-based e-voting dApp</li>
+<li>we&rsquo;re not just trasforming ballots into blocks; we&rsquo;re reshaping the future of secure and transparent digital voting</li>
+<li>let&rsquo;s dive in</li>
+
+</ul>
+
+</aside>
+<section>
+<section id="slide-orgafd82c4">
+<h2 id="orgafd82c4">🤖 INTRODUCTION</h2>
+<ul>
+<li>Empowering Democracy 🚀 <b>Blockchain</b>-Powered E-Voting <b>dApp</b></li>
+
+</ul>
+<ul>
+<li class="fragment appear">Transforming <b>Ballots</b> 🗳 into <b>Blocks</b> 🌐 for a Secure Digital Future
+<ul>
+<li>💻 Revolutionizing the Voting System with Cutting-edge Solutions</li>
+
+</ul></li>
+
+</ul>
+<ul>
+<li class="fragment appear">Why?
+<ul>
+<li>🧗‍♂ ️Addressing Challenges in Traditional Voting Systems</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org985ad4f">
+<h3 id="org985ad4f">🚫 THE CHALLENGES</h3>
+<ul>
+<li>🌟 <b>Mi-Voting</b> dApp: A Technological Leap to Overcome Challenges</li>
+
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">BLOCKCHAIN-POWERED</th>
+<th scope="col" class="org-left">TRADITIONAL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">- decentralized</td>
+<td class="org-left">- centralized</td>
+</tr>
+
+<tr>
+<td class="org-left">- transparent</td>
+<td class="org-left">- lack of transparency</td>
+</tr>
+
+<tr>
+<td class="org-left">- secure</td>
+<td class="org-left">- security issues</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<ul>
+<li>decentralized advantage
+<ul>
+<li>decentralizes the voting process, eliminating a central authority and ensuring a more democratic and tamper-resistant environment</li>
+
+</ul></li>
+<li>transparency boost
+<ul>
+<li>transparency by recording all transactions publicly, building trust in the integrity of the voting process</li>
+
+</ul></li>
+<li>security measures
+<ul>
+<li>decentralized and cryptographic nature of blockchain ensures high level of security, each vote is securely recorded and cannot be altered, providing a robust defense against unauthorized manipulation</li>
+
+</ul></li>
+
+<li>lack of transparency
+<ul>
+<li>votes often happen behind closed doors in traditional systems, making it difficult to verify accuracy of results</li>
+
+</ul></li>
+<li>security issues
+<ul>
+<li>vulnerbilities in traditional systems leave room for manipulation and fraud</li>
+
+</ul></li>
+<li>inefficiencies and potential fraud
+<ul>
+<li>cumbersome processes in traditional voting can lead to errors and fraud</li>
+
+</ul></li>
+
+</ul>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-org7787bc3">
+<h2 id="org7787bc3">🎯 KEY PROJECT AIMS AND OBJECTIVES</h2>
+<ul>
+<li>🔍 Foster Transparency, Security and Trust</li>
+
+</ul>
+<ul>
+<li class="fragment appear">🔄 Improve Efficiency and Accessibility</li>
+<li class="fragment appear">🔐 Ensure Integrity of Voting Systems</li>
+
+</ul>
+
+<aside class="notes">
+<ul>
+<li>the primary goal is to make the voting process more transparent, secure, and trustworthy</li>
+<li>the aim is to simplify the voting process, making it more accessible to everyone</li>
+<li>commitment to preserving the integrity of the democratic process is at the core of the project</li>
+
+</ul>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orgb4b0fb4">
+<h2 id="orgb4b0fb4">🛠 TECHNICAL STACK &amp; PROOF OF CONCEPT</h2>
+<div class="outline-text-2" id="text-orgb4b0fb4">
+</div>
+</section>
+<section id="slide-org20365d4">
+<h3 id="org20365d4">🚀 EMPOWERING WITH TECHNOLOGY</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">TECHNOLOGIES</th>
+<th scope="col" class="org-left">CONCEPTS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">- blockchain (hardhat)</td>
+<td class="org-left"><b>open</b>, <b>distributed</b>, <b>immutable</b> ledger</td>
+</tr>
+
+<tr>
+<td class="org-left">- smart contract (solidity)</td>
+<td class="org-left"><b>self-executing</b> contract with predefined rules</td>
+</tr>
+
+<tr>
+<td class="org-left">- IPFS (InterPlanetary File System)</td>
+<td class="org-left"><b>decentralized</b> storage solution</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<ul>
+<li>blockchain technology (hardhat)
+<ul>
+<li>concise and straightforward: The open, distributed, and immutable ledger ensures transparency and security in the voting process</li>
+<li>addressing challenges: The decentralized nature of blockchain eliminates the risks associated with centralized systems.</li>
+
+</ul></li>
+<li>smart contract
+<ul>
+<li>automating interactions: the self-executing contract with predefined rules streamline and secure the voting process</li>
+<li>innovation: this eliminates intermediaries, reducing the potential for errors and fraud</li>
+
+</ul></li>
+<li>IPFS (InterPlanetary File System)
+<ul>
+<li>enhancing accessibility: the decentralized storage solution ensures that critical data related to the voting process is securely stored and easily accessible</li>
+<li>security boost: the decentralized nature of IPFS contributes to a resilient and secure environment</li>
+
+</ul></li>
+
+</ul>
+
+</aside>
+</section>
+<section id="slide-org7f80e07">
+<h3 id="org7f80e07">🔄 WORKFLOW</h3>
+<ul>
+<li>👥 Streamlining the Entire Voting Process for Administrators and Voters</li>
+
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ADMIN&rsquo;s PERSPECTIVE</th>
+<th scope="col" class="org-left">VOTER&rsquo;s PERSPECTIVE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">- candidate registration</td>
+<td class="org-left">- voter registration</td>
+</tr>
+
+<tr>
+<td class="org-left">- managing the voting process</td>
+<td class="org-left">- vote casting</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<ul>
+<li>admin&rsquo;s perspective
+<ul>
+<li>efficient management: candidate registration becomes a seamless process, and admins can easily verify information</li>
+<li>secure oversight: admins can manage the voting process securely, ensuring tamper-resistant environment</li>
+
+</ul></li>
+
+<li>voter&rsquo;s perspective
+<ul>
+<li>easy registration: voters experience a user-friendly registration process, enhancing accessibility</li>
+<li>secure voting: casting votes becomes straightforward and secure, ensuring the integrity of each vote</li>
+
+</ul></li>
+
+</ul>
+
+</aside>
+</section>
+<section id="slide-org46f4743">
+<h3 id="org46f4743">🎬 PROOF OF CONCEPT (DEMO)</h3>
+<ul>
+<li>🛠️ Showcasing how the Technical Stack Mitigates Challenges
+<ul>
+<li>⏱️ Duration: [04:30]</li>
+
+</ul></li>
+
+</ul>
+<aside class="notes">
+<ul>
+<li>the demo will showcase the unique features of the Mi-Voting dApp</li>
+<li>it&rsquo;ll highlight how the technical stack and streamlined workflow make Mi-Voting a groundbreaking solution to traditional voting challenges</li>
+
+</ul>
+
+</aside>
+</section>
+<section id="slide-org68eacf5">
+<h3 id="org68eacf5">🧰 COMPONENTS</h3>
+<ul>
+<li>️🏗️ Building Blocks for Success</li>
+
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">FRONTEND</th>
+<th scope="col" class="org-left">BACKEND</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">- react</td>
+<td class="org-left">- next.js</td>
+</tr>
+
+<tr>
+<td class="org-left">- chakra ui</td>
+<td class="org-left">- smart contract (solidity)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- blockchain (hardhat)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">- IPFS</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<ul>
+<li>building blocks of the Mi-Voting App</li>
+
+<li>frontend
+<ul>
+<li>react: user interface for voters and administrators</li>
+<li>chakra UI: user interface component library for consistent and visually appealing design</li>
+
+</ul></li>
+
+<li>backend
+<ul>
+<li>Next.js: empowers the backend, advantages include server-side rendering, improved performance, and a great developer experience</li>
+<li>smart contract (solidity): heart of the mi-Voting dApp, ensuring secure and automated voting through predefined rules</li>
+<li>blockchain (hardhat): distributed ledger that records all transactions, ensuring transparency and security in the voting process</li>
+<li>IPFS: securely stores critical data related to the voting process, enhancing accessibility and resilience</li>
+
+</ul></li>
+
+</ul>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orgb491daf">
+<h2 id="orgb491daf">THANK YOU</h2>
+<p>
+🙏
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

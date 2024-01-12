@@ -1,0 +1,58 @@
+Mi-Voting dApp - Mauritian E-Voting dApp Event Logs
+
+[Date and Time]: [Event Description]
+------------------------------------------------------------
+
+[Date and Time]: Voting Dapp Launched
+   - The E-Voting Dapp for the Mauritius election has been launched.
+   - Eligible voters can now access the Dapp and participate in the election.
+
+[Date and Time]: Voter Registration Opens
+   - The voter registration period has started.
+   - Eligible citizens can now register to participate in the election.
+
+[Date and Time]: Voter Registered
+   - [Voter's Name] with ID [Voter's ID] has successfully registered.
+   - They are now eligible to cast their vote.
+
+[Date and Time]: Voting Period Started
+   - The official voting period has begun.
+   - Voters can now cast their votes for their preferred superhero candidate.
+
+[Date and Time]: Vote Cast
+   - [Voter's Name] has cast their vote for [Selected Candidate].
+   - The vote has been recorded in the blockchain.
+
+[Date and Time]: Voting Period Ended
+   - The voting period has ended.
+   - The E-Voting Dapp is now closed for new votes.
+
+[Date and Time]: Voting Results Calculated
+   - The votes have been tallied, and the results are in.
+   - [Winner Candidate] from [Winner Party] has won the election.
+
+[Date and Time]: Election Completed
+   - The election process has been successfully completed.
+   - The winner has been declared, and the E-Voting Dapp is now closed.
+
+[Date and Time]: E-Voting Dapp Shutdown
+   - The E-Voting Dapp has been shut down.
+   - The election process has concluded.
+
+[Date and Time]: Dapp Support Contact
+   - For any inquiries or assistance, please contact [Support Email/Phone Number].
+
+[Date and Time]: Code of Conduct Violation
+   - A voter has been found attempting to manipulate the election process.
+   - Appropriate actions have been taken as per the code of conduct.
+
+[Date and Time]: Technical Issue Resolved
+   - A technical issue affecting the Dapp has been resolved.
+   - Voting process continues smoothly.
+
+[Date and Time]: Dapp Audit Initiated
+   - An audit of the E-Voting Dapp's smart contract and transactions has been initiated.
+
+These event logs provide a chronological record of important events and actions within the E-Voting Dapp. Customize the content as needed to reflect the actual events and actions that occur during the voting process for the Mauritius election.
+
+
