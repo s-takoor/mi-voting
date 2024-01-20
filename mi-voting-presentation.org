@@ -9,6 +9,12 @@
 #+SUBTITLE: Open University of Mauritius
 #+DATE: [2023-11-14 12:00]
 
+#+BEGIN_NOTES
+- morning, everyone! today, i'm presenting Mi-Voting, a revolutionary blockchain-based e-voting dApp
+- we're not just trasforming ballots into blocks; we're reshaping the future of secure and transparent digital voting
+- let's dive in
+#+END_NOTES
+
 * 🤖 INTRODUCTION
 - Empowering Democracy 🚀 *Blockchain*-Powered E-Voting *dApp*
 #+ATTR_REVEAL: :frag (appear)
@@ -27,11 +33,33 @@
 | - transparent      | - lack of transparency |
 | - secure           | - security issues      |
 |--------------------+------------------------|
+#+BEGIN_NOTES
+- decentralized advantage
+ + decentralizes the voting process, eliminating a central authority and ensuring a more democratic and tamper-resistant environment
+- transparency boost
+  + transparency by recording all transactions publicly, building trust in the integrity of the voting process
+- security measures
+  + decentralized and cryptographic nature of blockchain ensures high level of security, each vote is securely recorded and cannot be altered, providing a robust defense against unauthorized manipulation
+
+- lack of transparency
+  + votes often happen behind closed doors in traditional systems, making it difficult to verify accuracy of results
+- security issues
+  + vulnerbilities in traditional systems leave room for manipulation and fraud
+- inefficiencies and potential fraud
+  + cumbersome processes in traditional voting can lead to errors and fraud
+#+END_NOTES
+
 * 🎯 KEY PROJECT AIMS AND OBJECTIVES
 - 🔍 Foster Transparency, Security and Trust
 #+ATTR_REVEAL: :frag (appear)
 - 🔄 Improve Efficiency and Accessibility
 - 🔐 Ensure Integrity of Voting Systems
+
+#+BEGIN_NOTES
+- the primary goal is to make the voting process more transparent, secure, and trustworthy
+- the aim is to simplify the voting process, making it more accessible to everyone
+- commitment to preserving the integrity of the democratic process is at the core of the project
+#+END_NOTES
 
 * 🛠 TECHNICAL STACK & PROOF OF CONCEPT
 ** 🚀 EMPOWERING WITH TECHNOLOGY
@@ -42,6 +70,18 @@
 | - smart contract (solidity)         | *self-executing* contract with predefined rules |
 | - IPFS (InterPlanetary File System) | *decentralized* storage solution                |
 |-------------------------------------+-----------------------------------------------|
+#+BEGIN_NOTES
+- blockchain technology (hardhat)
+  + concise and straightforward: The open, distributed, and immutable ledger ensures transparency and security in the voting process
+  + addressing challenges: The decentralized nature of blockchain eliminates the risks associated with centralized systems.
+- smart contract
+  + automating interactions: the self-executing contract with predefined rules streamline and secure the voting process
+  + innovation: this eliminates intermediaries, reducing the potential for errors and fraud
+- IPFS (InterPlanetary File System)
+  + enhancing accessibility: the decentralized storage solution ensures that critical data related to the voting process is securely stored and easily accessible
+  + security boost: the decentralized nature of IPFS contributes to a resilient and secure environment
+#+END_NOTES
+
 ** 🔄 WORKFLOW
 - 👥 Streamlining the Entire Voting Process for Administrators and Voters
 |-------------------------------+----------------------|
@@ -50,9 +90,24 @@
 | - candidate registration      | - voter registration |
 | - managing the voting process | - vote casting       |
 |-------------------------------+----------------------|
+#+BEGIN_NOTES
+- admin's perspective
+  + efficient management: candidate registration becomes a seamless process, and admins can easily verify information
+  + secure oversight: admins can manage the voting process securely, ensuring tamper-resistant environment
+
+- voter's perspective
+  + easy registration: voters experience a user-friendly registration process, enhancing accessibility
+  + secure voting: casting votes becomes straightforward and secure, ensuring the integrity of each vote
+#+END_NOTES
+
 ** 🎬 PROOF OF CONCEPT (DEMO)
 - 🛠️ Showcasing how the Technical Stack Mitigates Challenges
     + ⏱️ Duration: [04:30]
+#+BEGIN_NOTES
+- the demo will showcase the unique features of the Mi-Voting dApp
+- it'll highlight how the technical stack and streamlined workflow make Mi-Voting a groundbreaking solution to traditional voting challenges
+#+END_NOTES
+
 ** 🧰 COMPONENTS
 - ️🏗️ Building Blocks for Success
 |-------------+-----------------------------|
@@ -63,5 +118,19 @@
 |             | - blockchain (hardhat)      |
 |             | - IPFS                      |
 |-------------+-----------------------------|
+#+BEGIN_NOTES
+- building blocks of the Mi-Voting App
+
+- frontend
+  + react: user interface for voters and administrators
+  + chakra UI: user interface component library for consistent and visually appealing design
+
+- backend
+  + Next.js: empowers the backend, advantages include server-side rendering, improved performance, and a great developer experience
+  + smart contract (solidity): heart of the mi-Voting dApp, ensuring secure and automated voting through predefined rules
+  + blockchain (hardhat): distributed ledger that records all transactions, ensuring transparency and security in the voting process
+  + IPFS: securely stores critical data related to the voting process, enhancing accessibility and resilience
+#+END_NOTES
+
 * THANK YOU
 🙏

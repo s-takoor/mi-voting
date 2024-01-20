@@ -1,10 +1,10 @@
 :PROPERTIES:
-#+title: MI-VOTING
+#+title: 🗳 MI-VOTING
 #+author: s-takoor (202007012)
 #+setupfile: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 :END:
 
-Revolutionary blockchain-based voting DApp, a final year university project, transforming elections with secure, transparent, and tamper-resistant voting experiences. 🗳️🔗
+🔗 Revolutionary blockchain-based voting DApp, a final year university project, transforming elections with secure, transparent, and tamper-resistant voting experiences. ️
 
 ** 🚀 TL;DR
 This documentation outlines the process of implementing the blockchain-based e-voting decentralized application (dApp) using Bun as the primary JavaScript runtime and toolkit. It covers setting up the development environment, deploying the smart contract on a local Hardhat Ethereum development environment, and implementing the Mi-Voting dApp.
@@ -117,12 +117,47 @@ brew install ipfs
 |------------+-------+-------+-------+----------+--------|
 | Language   | Files | Lines | Codes | Comments | Blanks |
 |------------+-------+-------+-------+----------+--------|
-| HTML       |     1 |   366 |   332 |        1 |     33 |
+| HTML       |     2 |   730 |   641 |        2 |     87 |
 | JavaScript |    20 |  1695 |  1492 |       13 |    190 |
-| JSON       |     5 | 13156 | 13155 |        0 |      1 |
-| Org        |     1 |   124 |   103 |        0 |     21 |
+| JSON       |     5 | 13157 | 13156 |        0 |      1 |
+| Org        |     2 |   260 |   225 |        0 |     35 |
 | Solidity   |     1 |   180 |   126 |       21 |     33 |
 | Plain Text |     2 |   111 |     0 |       81 |     30 |
 |------------+-------+-------+-------+----------+--------|
-| Total      |    30 | 15632 | 15208 |      116 |    308 |
+| Total      |    32 | 16133 | 15640 |      117 |    376 |
 |------------+-------+-------+-------+----------+--------|
+* 🚨 ENVIRONMENT VARIABLES
+This project relies on environment variables for configuring Ethereum and IPFS connections. Before running the project locally, make sure to set up a `.env` file in the root directory with the following content:
+#+begin_src sh
+# -- ETHEREUM RPC URL -- #
+# -- ETHEREUM RPC URL -- #
+LOCALHOST_URL=http://localhost:8545
+HARDHAT_NETWORK_URL=http://localhost:8545
+
+# -- IPFS RPC API SERVER -- #
+IPFS_NODE_URL=http://localhost:5001
+IPFS_HOST=localhost
+IPFS_PORT='5001'
+
+# -- IPFS GATEWAY URL -- #
+IPFS_GATEWAY_URL=http://127.0.0.1:8080/ipfs
+
+# -- IPFS CID HASHES -- #
+CANDIDATE_0="replace_value"
+CANDIDATE_1="replace_value"
+CANDIDATE_2="replace_value"
+
+# -- IPFS CID HASHES FILES -- #
+IPFS_CONTRACT_METADATA="replace_value"
+IPFS_ELECTION_GUIDELINES_CID="replace_value"
+IPFS_EVENT_LOGS="replace_value"
+
+# -- SMART CONTRACT ADDRESS -- #
+VOTING_CONTRACT_ADDRESS="replace_value"
+
+# -- AUTHORIZATION CHECK -- #
+SMART_CONTRACT_OWNER_ADDRESS="replace_value"
+SMART_CONTRACT_OWNER_PRIVATE_KEY="replace_value"
+#+end_src
+
+Replace the placeholder values with your actual Ethereum and IPFS configurations and CID hashes.
