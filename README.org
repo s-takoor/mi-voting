@@ -10,7 +10,7 @@ Revolutionary blockchain-based voting DApp, a final year university project, tra
 This documentation outlines the process of implementing the blockchain-based e-voting decentralized application (dApp) using Bun as the primary JavaScript runtime and toolkit. It covers setting up the development environment, deploying the smart contract on a local Hardhat Ethereum development environment, and implementing the Mi-Voting dApp.
 
 ** 🎬 DEMO
-[[https://github.com/s-takoor/mi-voting/public/resource/demo.gif][demo]]
+[[https://github.com/s-takoor/mi-voting/blob/main/public/resource/demo.gif][demo]]
 
 ** 🎯 OVERVIEW
 This guide will walk you through the following key steps:
