@@ -4,7 +4,16 @@
 #+setupfile: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 :END:
 
-🔗 Revolutionary blockchain-based voting DApp, a final year university project, transforming elections with secure, transparent, and tamper-resistant voting experiences. ️
+* TABLE OF CONTENTS :toc:
+  - [[#-tldr][🚀 TL;DR]]
+  - [[#-demo][🎬 DEMO]]
+  - [[#-overview][🎯 OVERVIEW]]
+  - [[#-technologies-and-tools][🛠 TECHNOLOGIES AND TOOLS]]
+  - [[#️-setting-up-the-development-environment][🏗️ SETTING UP THE DEVELOPMENT ENVIRONMENT]]
+  - [[#️-starting-the-dev-server][⚙️ STARTING THE DEV SERVER]]
+  - [[#-checklist][✅ CHECKLIST]]
+  - [[#-code-statistics][🤖 CODE STATISTICS]]
+  - [[#-environment-variables][🚨 ENVIRONMENT VARIABLES]]
 
 ** 🚀 TL;DR
 This documentation outlines the process of implementing the blockchain-based e-voting decentralized application (dApp) using Bun as the primary JavaScript runtime and toolkit. It covers setting up the development environment, deploying the smart contract on a local Hardhat Ethereum development environment, and implementing the Mi-Voting dApp.
@@ -85,7 +94,7 @@ rip artifacts
 rip cache
 #+end_src
 
-* STARTING THE DEV SERVER
+** ⚙️ STARTING THE DEV SERVER
 - with Bun
 #+begin_src bash
 bun --bun run dev
@@ -98,7 +107,7 @@ bun run dev
 
 Visit http://localhost:3000 in your browser to access the application.
 
-** CHECKLIST
+** ✅ CHECKLIST
 Before you begin, ensure you've completed the following:
 - Installed Bun using the command
 #+begin_src bash
@@ -126,10 +135,9 @@ brew install ipfs
 |------------+-------+-------+-------+----------+--------|
 | Total      |    32 | 16133 | 15640 |      117 |    376 |
 |------------+-------+-------+-------+----------+--------|
-* 🚨 ENVIRONMENT VARIABLES
+** 🚨 ENVIRONMENT VARIABLES
 This project relies on environment variables for configuring Ethereum and IPFS connections. Before running the project locally, make sure to set up a `.env` file in the root directory with the following content:
 #+begin_src sh
-# -- ETHEREUM RPC URL -- #
 # -- ETHEREUM RPC URL -- #
 LOCALHOST_URL=http://localhost:8545
 HARDHAT_NETWORK_URL=http://localhost:8545
