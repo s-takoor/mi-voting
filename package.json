@@ -16,7 +16,7 @@
     "dotenv": "^16.3.1",
     "framer-motion": "^10.16.4",
     "ipfs-api": "^26.1.2",
-    "next": "13.4.19",
+    "next": "13.5.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0"
